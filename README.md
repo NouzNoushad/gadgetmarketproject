@@ -1,11 +1,11 @@
 # Gadgetmarketproject
 
-1. Back end - Nodejs
-2. Front end - Bootstrap + ejs
+1. Nodejs - Back end
+2. Bootstrap + ejs - Frond end
 3. Mongodb - Database
 4. Passport - Authentication
 5. Multer - upload File
-6. Bcrypt - secure password.
+6. Bcrypt - secure password
 
 
 About GadgetMarketProject:
@@ -31,8 +31,9 @@ Drawbacks:
   resources:
    - Youtube videos
        Traversy Media,
-       webdev simplified,
+       Webdev simplified,
        Thapa technical,
+       Namaste javascript
        coders gyan
    - Google
       stackoverflow,
