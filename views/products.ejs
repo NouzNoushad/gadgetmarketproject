@@ -1,0 +1,27 @@
+   <div class="card mt-4">
+        <div class="card-body" style="background-color:rgba(240, 255, 255, 0.39);">
+
+            <% if(!products.length){ %>
+                <h4><a href="/products/ownership" class="nav-link text-center">Web Ownership</a></h4>
+                <p class="text-center">Wanted to Own the Web ? Complete above requirements & add new products</p>
+            <% }else{ %>
+                <div class="row row-cols-2 row-cols-sm-3 g-4 pt-4">
+                    <% products.map(product => { %>
+                        <div class="col-md-2">
+                            <div class="card ">
+                            <img src="/uploads/<%= product.image %> " class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= product.name %> </h5>
+                                <h6>Rating: <%= product.rating %> </h6>
+                                <p class="card-text">Rs.<%= product.price %> </p>
+                                <a href="/products/details/<%= product.id %> " class="btn btn-outline-primary form-control me-md-2" type="button">Details</a>
+                            </div>
+                            </div>
+                        </div>
+                    <% }); %> 
+
+                <% } %> 
+                </div>
+
+        </div>
+    </div>

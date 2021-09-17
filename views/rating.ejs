@@ -1,0 +1,45 @@
+<div class="row mt-5">
+    <div class="col-md-5 m-auto">
+        <div class="card card-body">
+
+            <form action="/products/rating/<%= product.id %> " method="POST">
+                 
+                <% if(typeof errors != undefined){ %>
+                    <% errors.map(error => { %>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <%= error.message %> 
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <% }); %> 
+                <% } %> 
+                <div class="mb-3 row justify-content-center mt-5">
+                        <div class="col-sm-9">
+                            <input type="username" class="form-control" id="username" name="username" placeholder="Username">
+                        </div>
+                </div>
+                <div class="mb-3 row justify-content-center">
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="rating" id="rating" placeholder="Rating [1 - 5]">
+                        </div>
+                </div>
+                <div class="mb-3 row justify-content-center">
+                        <div class="col-sm-9">
+                            <input type="review" class="form-control" id="review" name="review" placeholder="Review [inshort]">
+                        </div>
+                </div>
+                <div class="mb-3 row justify-content-center">
+                        <div class="col-sm-9">
+                            <textarea type="text" class="form-control" id="message" name="message" placeholder="Write Your Message..."></textarea>
+                        </div>
+                </div>
+
+                <div class="d-md-flex justify-content-md-center">
+                    <button type="submit" class="btn btn-primary col-sm-9 mt-2">Submit review</button>
+                </div>
+                <div class="d-md-flex justify-content-md-center">
+                    <a href="/products/details/<%= product.id %> " class="btn btn-secondary col-sm-9 mt-2 mb-5">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

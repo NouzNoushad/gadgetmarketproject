@@ -1,0 +1,57 @@
+<div class="row mt-5">
+    <div class="col-md-7 m-auto">
+    <div class="card card-body">
+
+        <form action="/products/ownership" method="POST">         
+
+            <% if(typeof errors != undefined){ %>
+                <% errors.map(error => { %>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <%= error.message %> 
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <% }); %> 
+            <% } %>   
+            <div class="mb-3 mt-5 row justify-content-center">
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                    </div>
+            </div>
+            <div class="mb-2 row justify-content-center">
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                    </div>
+            </div>
+            <div class="mb-2 row justify-content-center">
+                    <div class="col-sm-9">
+                        <small class="mb-0">generate strong password*</small>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                    </div>
+            </div>
+            <div class="mb-2 row justify-content-center">
+                    <div class="col-sm-9">
+                        <small class="mb-0">optional*</small>
+                        <input type="text" class="form-control" id="profession" name="profession" placeholder="Profession">
+                    </div>
+            </div>
+            <div class="mb-2 row justify-content-center">
+                    <div class="col-sm-9">
+                        <small class="mb-0">optional*</small>
+                        <input type="text" class="form-control" id="company" name="company" placeholder="Company Name">
+                    </div>
+            </div>
+            <div class="mb-3 row justify-content-center">
+                    <div class="col-sm-9">
+                        <small class="mb-0">optional*</small>
+                        <textarea class="form-control" id="details" name="details" placeholder="Add Company details.."></textarea>
+                    </div>
+            </div>
+    
+            <div class="d-md-flex justify-content-md-center">
+                <button type="submit" class="btn btn-primary col-sm-9 mt-2 mb-5">Submit Web Ownership</button>
+            </div>
+            
+        </form>
+    </div>
+</div>
+</div>

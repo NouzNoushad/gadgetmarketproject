@@ -1,0 +1,34 @@
+    <div class="col-sm-9 mt-4">
+        <form action="/products" method="POST">
+
+            <div class="position-relative">
+                <label for="validationTooltip04" class="form-label">Choose Product: </label>
+                <select class="form-select" id="validationTooltip04" name="category" id="category" required>
+                    <option selected disabled value="">Category</option>
+                    <option>All</option>
+                    <% categories.map(category => { %>
+                        <option><%= category %> </option>
+                    <% }); %> 
+                </select>
+                <div class="invalid-tooltip">
+                Please select a valid Category
+                </div>
+            </div>
+
+            <div class="position-relative mt-2">
+                <select class="form-select" id="validationTooltip04" name="company" id="company" required>
+                    <option selected disabled value="">Company</option>
+                    <option>All</option>
+                    <% companies.map(company => { %>
+                        <option><%= company %> </option>
+                    <% }); %> 
+                </select>
+                <div class="invalid-tooltip">
+                Please select a valid Category
+                </div>
+            </div>
+
+            <button class="btn btn-primary col-sm-12 mt-2">Search</button>
+        
+        </form>
+    </div>

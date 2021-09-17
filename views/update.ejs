@@ -1,0 +1,62 @@
+<div class="row mt-5">
+    <div class="col-md-7 m-auto">
+    <div class="card card-body">
+
+        <form action="/products/update/<%= product.id %> " method="POST" enctype="multipart/form-data"> 
+
+            <% if(typeof errors != undefined){ %>
+                <% errors.map(error => { %>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <%= error.message %> 
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <% }); %> 
+            <% } %>
+            <h3 class="text-center mt-4 mb-2"><%= product.name %> </h3>
+            <div class="mb-3 text-center">
+                <img src="/uploads/<%= product.image %> " alt="<%= product.name %> " height=300>
+            </div>
+            <div class="mb-3 row justify-content-center">
+                    <div class="col-sm-9">
+                        <small class="mb-0">upload only if needed to change Image*</small>
+                        <input type="file" class="form-control" id="image" name="myImage" value="<%= product.image %>" >
+                    </div>
+            </div>
+            <div class="mb-3 row justify-content-center">
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="<%= product.name %> ">
+                    </div>
+            </div>
+            <div class="mb-3 row justify-content-center">
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="category" name="category" placeholder="Product" value="<%= product.category %> ">
+                    </div>
+            </div>
+            <div class="mb-3 row justify-content-center">
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="company" name="company" placeholder="Brand" value="<%= product.company %> ">
+                    </div>
+            </div>
+            <div class="mb-3 row justify-content-center">
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" id="price" name="price" placeholder="Price" value=<%= product.price %>>
+                    </div>
+            </div>
+            <div class="mb-3 row justify-content-center">
+                    <div class="col-sm-9">
+                        <textarea class="form-control" id="description" name="description" placeholder="Details"><%= product.description %> </textarea>
+                    </div>
+            </div>
+            <div class="d-md-flex justify-content-md-center">
+                <button type="submit" class="btn btn-primary col-sm-9 mt-2 mb-2">Update</button>
+            </div>
+            <div class="d-md-flex justify-content-md-center">
+                <a href="/products/details/<%= product.id %> " class="btn btn-secondary col-sm-9 mb-2">Cancel</a>
+            </div>
+            <div class="d-md-flex justify-content-md-center mb-5">
+                <p class="lead">Or delete product details?<a href="/products/delete/<%= product.id %> " class="ps-2" style="color:red">Delete</a></p>
+            </div>
+        </form>
+    </div>
+    </div>
+</div>
