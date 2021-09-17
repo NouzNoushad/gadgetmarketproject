@@ -1,4 +1,4 @@
-# gadgetmarketproject
+# Gadgetmarketproject
 
 1. Back end - Nodejs
 2. Front end - Bootstrap + ejs
