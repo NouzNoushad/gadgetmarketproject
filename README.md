@@ -29,17 +29,17 @@ Drawbacks:
   - lot of repeated validations/error handling codes.
   
   resources:
-   - Youtube videos
+   - Youtube videos:
        Traversy Media,
        Webdev simplified,
        Thapa technical,
        Namaste javascript
        coders gyan
-   - Google
+   - Google:
       stackoverflow,
       npm docs,
       mozilla MDN docs
-  - Books
+  - Books:
       so you don't know javascript by kyle simpson.
       
   
